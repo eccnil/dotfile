@@ -27,27 +27,43 @@ This function should only modify configuration layer settings."
    dotspacemacs-ask-for-lazy-installation t
 
    ;; List of additional paths where to look for configuration layers.
-   ;; Paths must have a trailing slash (i.e. "~/.mycontribs/")
+   ;; Paths must have a trailing slash (i.e. `~/.mycontribs/')
    dotspacemacs-configuration-layer-path '()
 
    ;; List of configuration layers to load.
+   ;;mac-right-option-modifier nil
    dotspacemacs-configuration-layers
-   '(
+   '(csv
+     html
+     nginx
+     restclient
+     yaml
+     javascript
      ;; ----------------------------------------------------------------
      ;; Example of useful layers you may want to use right away.
      ;; Uncomment some layer names and press `SPC f e R' (Vim style) or
      ;; `M-m f e R' (Emacs style) to install them.
      ;; ----------------------------------------------------------------
-     ;; auto-completion
+     auto-completion
      ;; better-defaults
      emacs-lisp
-     ;; git
+     git
      helm
-     ;; lsp
-     ;; markdown
+     lsp
+     docker
+     kubernetes
+     java
+     markdown
      multiple-cursors
+     org
      rust
-     ;; org
+     kubernetes
+     (osx :variables
+          osx-option-as 'none
+          osx-function-as 'meta
+          osx-control-as 'control)
+     ranger
+     ;;osx
      ;; (shell :variables
      ;;        shell-default-height 30
      ;;        shell-default-position 'bottom)
@@ -574,3 +590,22 @@ before packages are loaded."
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
+(defun dotspacemacs/emacs-custom-settings ()
+  "Emacs custom settings.
+This is an auto-generated function, do not modify its content directly, use
+Emacs customize menu instead.
+This function is called at the very end of Spacemacs initialization."
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+   '(csv-mode company-web web-completion-data counsel-css emmet-mode helm-css-scss pug-mode sass-mode haml-mode scss-mode slim-mode tagedit web-mode nginx-mode company-restclient know-your-http-well ob-http ob-restclient restclient-helm restclient yaml-mode kubernetes-evil kubernetes magit-popup kubernetes-tramp add-node-modules-path counsel-gtags counsel swiper ivy ggtags helm-gtags impatient-mode import-js grizzl js-doc js2-refactor multiple-cursors livid-mode nodejs-repl npm-mode prettier-js skewer-mode js2-mode simple-httpd tern web-beautify ranger groovy-imports pcache groovy-mode lsp-java dap-mode lsp-docker bui maven-test-mode mvn ac-ispell auto-complete auto-yasnippet cargo evil-org flycheck-pos-tip pos-tip flycheck-rust fuzzy gh-md git-link git-messenger git-modes git-timemachine gitignore-templates gnuplot helm-c-yasnippet helm-company company helm-git-grep helm-ls-git helm-lsp helm-org-rifle htmlize launchctl lsp-origami origami lsp-treemacs lsp-ui lsp-mode markdown-toc mmm-mode org org-cliplink org-contrib org-download org-mime org-pomodoro alert log4e gntp org-present org-projectile org-category-capture org-rich-yank orgit-forge orgit forge yaml markdown-mode ghub closql emacsql-sqlite emacsql treepy osx-clipboard osx-dictionary osx-trash reveal-in-osx-finder ron-mode rust-mode smeargle toml-mode treemacs-magit magit magit-section git-commit with-editor transient yasnippet-snippets yasnippet ace-jump-helm-line ace-link aggressive-indent auto-compile auto-highlight-symbol centered-cursor-mode clean-aindent-mode column-enforce-mode define-word devdocs dired-quick-sort drag-stuff dumb-jump editorconfig elisp-def elisp-slime-nav emr clang-format list-utils eval-sexp-fu evil-anzu anzu evil-args evil-cleverparens paredit evil-collection annalist evil-easymotion evil-escape evil-exchange evil-goggles evil-iedit-state iedit evil-indent-plus evil-lion evil-lisp-state evil-matchit evil-mc evil-nerd-commenter evil-numbers evil-surround evil-textobj-line evil-tutor evil-unimpaired evil-visual-mark-mode evil-visualstar expand-region eyebrowse fancy-battery flx-ido flx flycheck-elsa flycheck-package package-lint flycheck golden-ratio google-translate helm-ag helm-descbinds helm-make helm-mode-manager helm-org helm-projectile helm-purpose helm-swoop helm-themes helm-xref helm helm-core help-fns+ hide-comnt highlight-indentation highlight-numbers parent-mode highlight-parentheses hl-todo compat hungry-delete indent-guide info+ inspector link-hint lorem-ipsum macrostep multi-line shut-up nameless open-junk-file org-superstar overseer f pkg-info epl paradox spinner password-generator popup popwin quickrun rainbow-delimiters request restart-emacs smartparens space-doc spaceline-all-the-icons memoize spaceline all-the-icons powerline spacemacs-purpose-popwin spacemacs-whitespace-cleanup string-edit-at-point string-inflection symbol-overlay symon term-cursor toc-org treemacs-evil treemacs-icons-dired treemacs-persp persp-mode treemacs-projectile treemacs projectile cfrs ht pfuture ace-window avy posframe s undo-tree queue uuidgen vi-tilde-fringe vim-powerline volatile-highlights window-purpose imenu-list winum dash writeroom-mode visual-fill-column ws-butler async bind-map diminish dotenv-mode evil-evilified-state font-lock+ holy-mode hybrid-mode evil goto-chg hydra lv pcre2el use-package bind-key which-key)))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
+)
