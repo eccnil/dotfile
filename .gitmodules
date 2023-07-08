@@ -1,6 +1,6 @@
-[submodule "chemacs2/.config/.config/emacs"]
-	path = chemacs2/.config/.config/emacs
-	url = https://github.com/plexus/chemacs2
 [submodule "chemacs2/.emacs.d"]
 	path = chemacs2/.emacs.d
 	url = https://github.com/plexus/chemacs2
+[submodule "doomemacs/.doom.d"]
+	path = doomemacs/.doom.d
+	url = git@github.com:eccnil/doomemacs.git
